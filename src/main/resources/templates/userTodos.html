@@ -41,17 +41,13 @@
                 <th>Id</th>
                 <th>Desc</th>
                 <th>State</th>
-                <th>View</th>
-                <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <tr th:each="userTodo : ${userTodos}">
                 <td th:text="${userTodo.id}"><a href="/product/${product.id}">Id</a></td>
                 <td th:text="${userTodo.desc}">Product Id</td>
                 <td th:text="${userTodo.state}">State</td>
-                <td><a th:href="${ '/todo/' + userTodo.id}">View</a></td>
-                <td><a th:href="${'/todo/edit/' + userTodo.id}">Edit</a></td>
-                <td><a th:href="${'/todo/delete/' + userTodo.id}">Delete</a></td>
+                <td><a  type="submit" th:href="${'/todo/delete/' + userTodo.id}">Delete</a></td>
             </tr>
         </table>
 

@@ -9,8 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.iyzico.domain.Role;
 import com.iyzico.domain.User;
 
-
-@Transactional(readOnly = true)
+@Transactional
 public interface UserRepository extends JpaRepository<User, Integer>, JpaSpecificationExecutor<User>{
 
 	@Query("SELECT p FROM User p WHERE LOWER(p.username) = LOWER(:username)")

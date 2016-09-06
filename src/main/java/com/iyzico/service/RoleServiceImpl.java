@@ -16,7 +16,7 @@ import com.iyzico.repository.RoleRepository;
 
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class RoleServiceImpl implements RoleService {
     static Logger logger = LoggerFactory.getLogger(RoleServiceImpl.class);
     

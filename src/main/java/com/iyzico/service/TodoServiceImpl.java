@@ -15,7 +15,7 @@ import com.iyzico.repository.TodoRepository;
 
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class TodoServiceImpl implements TodoService {
 	static Logger logger = LoggerFactory.getLogger(TodoServiceImpl.class);
 
@@ -55,6 +55,7 @@ public class TodoServiceImpl implements TodoService {
 	}
 
 	@Override
+	
 	public Todo update(Todo todo){
 		todoDAO.save(todo);
 		return todo;

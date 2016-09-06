@@ -1,13 +1,8 @@
 package com.iyzico.controller;
 
-import java.nio.file.attribute.UserPrincipal;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,7 +35,7 @@ public class TodoController {
     @RequestMapping("todo/edit/{id}")
     public String edit(@PathVariable Integer id, Model model){
         model.addAttribute("todo", todoService.findById(id));
-        return "todoform";
+        return "editTodo";
     }
 
     @RequestMapping("todo/new")
@@ -60,17 +55,32 @@ public class TodoController {
 
     @RequestMapping(value = "todo", method = RequestMethod.POST)
     public String saveTodo(@Valid Todo todo,BindingResult bindingResult){
-    	if(bindingResult.hasErrors()) return "newTodo";
     	User activeUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		todo.setUser(activeUser);
+		System.out.println(todo.getId());
         todoService.save(todo);
+        todoService.flush();
         return "redirect:/todo/new";
+    }
+    
+    @RequestMapping(value = "editTodo", method = RequestMethod.POST)
+    public String editTodo(@Valid Todo todo,Model model, BindingResult bindingResult){
+    	User activeUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		todo.setUser(activeUser);
+        todoService.update(todo);
+        
+        model.addAttribute("todo", new Todo());
+        model.addAttribute("userTodos", todoService.findAllUserTodos(activeUser));
+        return "userTodos";
     }
 
     @RequestMapping("todo/delete/{id}")
-    public String delete(@PathVariable Integer id){
+    public String delete(@PathVariable Integer id,Model model){
         todoService.delete(id);
-        return "redirect:/todos";
+        User activeUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("todo", new Todo());
+        model.addAttribute("userTodos", todoService.findAllUserTodos(activeUser));
+        return "userTodos";
     }
 
 }

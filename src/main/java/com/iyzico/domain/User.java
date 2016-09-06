@@ -37,7 +37,6 @@ public class User extends BaseEntity  implements  java.io.Serializable{
 	@Column(name = "password", nullable = false)
 	@NotNull
 	@NotEmpty
-	@Length(min=6)
 	private String password;
 	
 	

@@ -8,8 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.iyzico.domain.Role;
 
-
-@Transactional(readOnly = true)
+@Transactional
 public interface RoleRepository extends JpaRepository<Role, Integer>, JpaSpecificationExecutor<Role>{
 
 	@Query("SELECT p FROM Role p WHERE LOWER(p.rolename) = LOWER(:rolename)")

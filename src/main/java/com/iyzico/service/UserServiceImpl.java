@@ -27,7 +27,7 @@ import com.iyzico.repository.UserRepository;
 
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class UserServiceImpl implements UserService {
 	static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 

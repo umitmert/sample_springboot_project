@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.iyzico.domain.Todo;
 import com.iyzico.domain.User;
 
-@Transactional(readOnly = true)
+@Transactional
 public interface TodoRepository extends JpaRepository<Todo, Integer>, JpaSpecificationExecutor<Todo>{
 	
 	List<Todo> findAllByUser(User user);
