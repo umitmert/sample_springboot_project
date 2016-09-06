@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+<div class="container">
+<ul>
+    <li th:each="err : ${#fields.errors('all')}" th:text="${err}" />
+</ul>
+ <th:block th:include="fragments/header :: header"></th:block>
+    <h2>User Todos</h2> 
+    <div>
+        <form class="form-horizontal" th:object="${todo}" th:action="@{/todo}" method="post">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" id="desc">Description:</label>
+                <div class="col-sm-10">
+                    <input for="desc" type="text" class="form-control" th:field="*{desc}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" id="state">State:</label>
+                <div class="col-sm-10">
+		            <select for="state" class="form-control" th:field="*{state}">
+		   				<option  th:each="state : ${T(com.iyzico.domain.TodoState).values()}"
+		          			th:value="${state}"  th:text="${state.displayName}">
+		   				</option>
+					</select>
+					</div>
+            </div>   
+                     
+             <div class="row">
+                <button type="submit" class="btn btn-default">Save</button>
+            </div>
+            
+            <br/><br/>
+            <div th:if="${not #lists.isEmpty(userTodos)}">
+        <h2>User Todo List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Desc</th>
+                <th>State</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="userTodo : ${userTodos}">
+                <td th:text="${userTodo.id}"><a href="/product/${product.id}">Id</a></td>
+                <td th:text="${userTodo.desc}">Product Id</td>
+                <td th:text="${userTodo.state}">State</td>
+                <td><a th:href="${ '/todo/' + userTodo.id}">View</a></td>
+                <td><a th:href="${'/todo/edit/' + userTodo.id}">Edit</a></td>
+                <td><a th:href="${'/todo/delete/' + userTodo.id}">Delete</a></td>
+            </tr>
+        </table>
+
+    </div>
+    
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

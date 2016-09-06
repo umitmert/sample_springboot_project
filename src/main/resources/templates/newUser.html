@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <th:block th:include="fragments/headerinc :: head"></th:block>
+</head>
+<body>
+<div class="container">
+<ul>
+    <li th:each="err : ${#fields.errors('all')}" th:text="${err}" />
+</ul>
+ <th:block th:include="fragments/header :: header"></th:block>
+    <h2>User Details</h2> 
+    <div>
+        <form class="form-horizontal" th:object="${user}" th:action="@{/user}" method="post">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{name}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Surname:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{surname}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Username:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{username}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Password:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{password}"/>
+                </div>
+            </div>            
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Address:</label>
+                <div class="col-sm-10">
+                <textarea class="form-control" rows="5" th:field="*{address}" ></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-default">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
