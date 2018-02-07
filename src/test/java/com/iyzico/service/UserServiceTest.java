@@ -18,9 +18,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.boot.test.autoconfigure.orm.jpa.AutoConfigureTestDatabase.Replace;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.ibss.util.Util;
 import com.iyzico.domain.User;
 import com.iyzico.repository.UserRepository;
-import com.iyzico.util.Util;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

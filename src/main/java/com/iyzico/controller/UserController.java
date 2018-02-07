@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.ibss.util.Util;
 import com.iyzico.domain.Role;
 import com.iyzico.domain.User;
 import com.iyzico.service.UserService;
-import com.iyzico.util.Util;
 
 @Controller
 public class UserController {

@@ -1,4 +1,4 @@
-package com.iyzico.util;
+package com.ibss.util;
 
 
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
