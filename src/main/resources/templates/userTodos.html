@@ -22,7 +22,7 @@
                 <label class="col-sm-2 control-label" id="state">State:</label>
                 <div class="col-sm-10">
 		            <select for="state" class="form-control" th:field="*{state}">
-		   				<option  th:each="state : ${T(com.iyzico.domain.TodoState).values()}"
+		   				<option  th:each="state : ${T(com.ibss.domain.TodoState).values()}"
 		          			th:value="${state}"  th:text="${state.displayName}">
 		   				</option>
 					</select>
