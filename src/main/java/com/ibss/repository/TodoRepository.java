@@ -1,4 +1,4 @@
-package com.iyzico.repository;
+package com.ibss.repository;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iyzico.domain.Todo;
-import com.iyzico.domain.User;
+import com.ibss.domain.Todo;
+import com.ibss.domain.User;
 
 @Transactional
 public interface TodoRepository extends JpaRepository<Todo, Integer>, JpaSpecificationExecutor<Todo>{

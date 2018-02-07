@@ -1,4 +1,4 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 
-import com.iyzico.domain.Role;
+import com.ibss.domain.Role;
 
 
 public interface RoleService {

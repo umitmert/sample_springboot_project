@@ -1,4 +1,4 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.io.IOException;
 import java.util.Date;
@@ -11,8 +11,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import com.iyzico.domain.Role;
-import com.iyzico.domain.User;
+import com.ibss.domain.Role;
+import com.ibss.domain.User;
 
 
 public interface UserService extends UserDetailsService {

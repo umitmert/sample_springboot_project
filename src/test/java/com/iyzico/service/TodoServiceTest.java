@@ -12,9 +12,9 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.iyzico.domain.Todo;
-import com.iyzico.domain.TodoState;
-import com.iyzico.repository.TodoRepository;
+import com.ibss.domain.Todo;
+import com.ibss.domain.TodoState;
+import com.ibss.repository.TodoRepository;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest

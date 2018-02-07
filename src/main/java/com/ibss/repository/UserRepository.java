@@ -1,4 +1,4 @@
-package com.iyzico.repository;
+package com.ibss.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iyzico.domain.Role;
-import com.iyzico.domain.User;
+import com.ibss.domain.Role;
+import com.ibss.domain.User;
 
 @Transactional
 public interface UserRepository extends JpaRepository<User, Integer>, JpaSpecificationExecutor<User>{

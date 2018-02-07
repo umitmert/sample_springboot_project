@@ -1,4 +1,4 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iyzico.config.CustomAuthenticationProvider;
-import com.iyzico.domain.Todo;
-import com.iyzico.domain.User;
-import com.iyzico.repository.TodoRepository;
+import com.ibss.config.CustomAuthenticationProvider;
+import com.ibss.domain.Todo;
+import com.ibss.domain.User;
+import com.ibss.repository.TodoRepository;
 
 
 @Service

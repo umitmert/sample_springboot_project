@@ -1,4 +1,4 @@
-package com.iyzico.domain;
+package com.ibss.domain;
 
 public enum TodoState {
 	WAITING("Waiting"), COMPLETED("Completed"), POSTPONED("Postponed");

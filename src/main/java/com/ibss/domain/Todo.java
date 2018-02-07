@@ -1,4 +1,4 @@
-package com.iyzico.domain;
+package com.ibss.domain;
 
 
 import javax.persistence.*;

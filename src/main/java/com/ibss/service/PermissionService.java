@@ -1,8 +1,8 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.util.List;
 
-import com.iyzico.domain.Permission;
+import com.ibss.domain.Permission;
 
 
 public interface PermissionService {

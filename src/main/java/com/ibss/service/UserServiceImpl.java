@@ -1,4 +1,4 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.util.Date;
 import java.util.List;
@@ -20,10 +20,10 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iyzico.config.CustomAuthenticationProvider;
-import com.iyzico.domain.Role;
-import com.iyzico.domain.User;
-import com.iyzico.repository.UserRepository;
+import com.ibss.config.CustomAuthenticationProvider;
+import com.ibss.domain.Role;
+import com.ibss.domain.User;
+import com.ibss.repository.UserRepository;
 
 
 @Service

@@ -1,4 +1,4 @@
-package com.iyzico.config;
+package com.ibss.config;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -13,11 +13,11 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
+import com.ibss.domain.Role;
+import com.ibss.domain.User;
+import com.ibss.service.RoleService;
+import com.ibss.service.UserService;
 import com.ibss.util.Util;
-import com.iyzico.domain.Role;
-import com.iyzico.domain.User;
-import com.iyzico.service.RoleService;
-import com.iyzico.service.UserService;
 
 
 

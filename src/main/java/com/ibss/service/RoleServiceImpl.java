@@ -1,4 +1,4 @@
-package com.iyzico.service;
+package com.ibss.service;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.iyzico.domain.Role;
-import com.iyzico.repository.RoleRepository;
+import com.ibss.domain.Role;
+import com.ibss.repository.RoleRepository;
 
 
 @Service

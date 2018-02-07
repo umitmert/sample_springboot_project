@@ -1,4 +1,4 @@
-package com.iyzico.controller;
+package com.ibss.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.ibss.domain.Role;
+import com.ibss.domain.User;
+import com.ibss.service.UserService;
 import com.ibss.util.Util;
-import com.iyzico.domain.Role;
-import com.iyzico.domain.User;
-import com.iyzico.service.UserService;
 
 @Controller
 public class UserController {

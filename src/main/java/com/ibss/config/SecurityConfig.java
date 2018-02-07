@@ -1,4 +1,4 @@
-package com.iyzico.config;
+package com.ibss.config;
 
 import javax.sql.DataSource;
 
@@ -19,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
 @EnableWebSecurity
 @Configuration
-@ComponentScan(basePackageClasses={com.iyzico.service.UserServiceImpl.class, com.iyzico.config.CustomAuthenticationProvider.class} )
+@ComponentScan(basePackageClasses={com.ibss.service.UserServiceImpl.class, com.ibss.config.CustomAuthenticationProvider.class} )
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired(required=true)

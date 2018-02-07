@@ -1,10 +1,10 @@
-package com.iyzico.repository;
+package com.ibss.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.iyzico.domain.Permission;
+import com.ibss.domain.Permission;
 
 
 public interface PermissionRepository extends JpaRepository<Permission, Integer>{

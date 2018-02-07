@@ -1,4 +1,4 @@
-package com.iyzico.controller;
+package com.ibss.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

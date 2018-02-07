@@ -1,4 +1,4 @@
-package com.iyzico.controller;
+package com.ibss.controller;
 
 import javax.validation.Valid;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.iyzico.domain.Todo;
-import com.iyzico.domain.User;
-import com.iyzico.service.TodoService;
+import com.ibss.domain.Todo;
+import com.ibss.domain.User;
+import com.ibss.service.TodoService;
 
 @Controller
 public class TodoController {
